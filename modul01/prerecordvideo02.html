@@ -43,6 +43,13 @@
         }
         document.write("<br><br> Reverse String Example<br>");
         document.write(revString('Md. Rajib Hossain'));
+
+        const revString1 = function(str){
+            return str.split('').reverse().join('');
+        }
+
+        document.write("<br><br> Reverse String with const Function<br><br>");
+        document.write(revString1('Hello World!'));
     </script>
 </body>
 </html>
