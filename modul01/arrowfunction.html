@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        // arrow function syntax
+
+        // const functionName = (paramete) => {
+        //     return parameter;
+        // }
+
+
+
+        const greet = (name) => {
+            console.log('Hello '+name);
+            document.write('Hello '+ name + "<br>");
+        }
+        const name = "Md. Rajib Hossain";
+        greet(name);
+
+        document.write("Another Example of Argument and parameter" + '<br>');
+
+        const add = (n1, n2) => n1 + n2;
+        document.write('Add paramet : ' + add(10,12) + '<br>');
+
+        // array number summation
+        // function sum(n){
+        //     const summation = n.reduce(function (o,n){
+        //         return o+n;
+        //     });
+        //     return summation;
+        // }
+        // document.write("<br><br>Array number sum: <br>");
+        // document.write(sum(2,3,4));
+        // array number summation
+
+        function sum(...n) {
+            const summation = n.reduce(function (acc, curr) {
+                return acc + curr;
+            }, 0);
+            return summation;
+        }
+
+        document.write("<br><br>Array number sum: <br>");
+        document.write(sum(2, 3, 4));
+
+
+        // Convert Arrow function
+        const sum1 = (...n) => {
+            return n.reduce((acc, curr) => acc + curr, 0);
+        };
+        document.write("<br><br>Array number sum: <br>");
+        document.write(sum1(2, 3, 4));
+
+        // convert Arrow function
+        const sum2 = (...n) => n.reduce((acc, curr) => acc + curr, 0);
+
+        document.write("<br><br>Array number sum: <br>");
+        document.write(sum2(2, 3, 4));
+
+        function _revString(str){
+            return str.split('').reverse().join('');
+        }
+        document.write("<br><br>String Reverse :<br>");
+        document.write(_revString("Md. Rajib Hossain"));
+
+        const revString = (str) => str.split('').reverse().join('');
+        document.write("<br><br>String Reverse :<br>");
+        document.write(revString("Md. Rajib Hossain"));
+    </script>
+</body>
+</html>
