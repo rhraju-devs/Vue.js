@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literal</title>
+</head>
+<body>
+    <script>
+        const fname = 'John';
+        const lname = 'Doe';
+        const person = {
+            fname: fname,
+            lname: lname,
+            introduce: function () {
+                document.write("Hi, I am " + this.fname + " " + this.lname);
+                console.log("Hi, I am " + this.fname + " " + this.lname);
+            }
+        };
+
+        document.write('<br>Regular Object:<br>');
+        console.log('<br>Regular Object:<br>');
+        document.write(JSON.stringify(person)); // Display the object as a string
+        console.log(person); // Display the object in the console
+        person.introduce(); // Call the `introduce` function
+        document.write("<br>");
+
+        const person_es6 = {
+            fname,
+            lname,
+            introduce() {
+                document.write("Hi, I am " + this.fname + " " + this.lname);
+                console.log("Hi, I am " + this.fname + " " + this.lname);
+            }
+        }
+
+        document.write('<br>Object Literal:<br>');
+        console.log('<br>Object Literal:<br>');
+        document.write(JSON.stringify(person_es6));
+        console.log(person_es6);
+        person_es6.introduce();
+        document.write("<br>");
+    </script>
+</body>
+</html>
