@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spreed Operator</title>
+</head>
+<body>
+    <!-- // Spreed Operator are use for unlimited parameter take -->
+    <script>
+
+        // This function takes regular parameter
+        function sum(n1,n2,n3,n4){
+            return n1+n2+n3+n4;
+        }
+        const result = sum(1,2,3,4);// takes limited number of parameter
+        document.write(result);
+
+        // This function takes unlimited parameters
+        
+
+        document.write('<br><br>Spreed Operator Example:<br><br>')
+        function spreedOperator1(...number)
+        {
+           document.write(number);
+        }
+        const sum1 = spreedOperator1(1,2,3,4,5);
+        document.write('<br><br>New Example of Spreed Operator:<br><br>');
+        const sum2 = spreedOperator1(1,2,3,4,5,6,7);
+
+        document.write('<br><br>Seperator Oparator Sum example:<br>');
+        function seperatorOperatorSum(...number)
+        {
+            return number.reduce((o,n) => o+n);
+        }
+        document.write('Give Input:<br>');
+        document.write('Result :');
+        const addition = seperatorOperatorSum(1,2,3,4,5);
+        document.write(addition);
+        document.write('<br>Another Example:<br>');
+        document.write('Result:');
+        const addition1 = seperatorOperatorSum(1,2);
+        document.write(addition1);
+
+
+
+    </script>
+</body>
+</html>
