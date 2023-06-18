@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+<body>
+    <script>
+            function greet(name, title)
+            {
+                document.write(`Hello ${title} ${name}`);
+            }
+            document.write('<br>Normal way of function parameter:<br>');
+            greet('Jone Doe', 'Mr.');
+            document.write('<br>');
+            greet('Jane Doe', 'Mr.');
+
+            document.write('<br>ES6 default parameter<br><br>');
+            function greeting(name, title="Mr."){
+                document.write(`Hello, ${title} ${name}`);
+            }
+
+            document.write('<br>');
+            greeting('Rajib Hossain');
+            document.write('<br>');
+            greeting('Tamanna Hossain', 'Mrs.');
+    </script>
+</body>
+</html>
