@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructing</title>
+</head>
+<body>
+    <!-- We use destruction method to read data from array or json object -->
+
+    <script>
+        const data = [12,3,25,34,5];
+        const a = data[0];
+        const b = data[1];
+        const c = data[3];
+        const d = data[4];
+        document.write('<br><br>Normal way of printing destring method:<br>');
+        document.write(a + "<br>");
+        document.write(b + "<br>");
+        document.write(c + "<br>");
+        document.write(d + "<br>");
+
+        document.write('<br><br>ES6 Destructing way<br>');
+        const [i,j,k,l] = data;
+        document.write(i+"<br>");
+        document.write(j+"<br>");
+        document.write(k+"<br>");
+        document.write(l+"<br>");
+
+        // if i want only two
+        const [x,y] = data;
+        document.write('<br><br>Printing only two:<br>' + x +'<br>');
+        document.write(y + '<br>');
+
+        // using seperator operator
+        const [m,n,...o] = data;
+        document.write('Destructing with seperator:');
+        document.write('<br>' + m + '<br>');
+        document.write('<br>'+n+'<br>');
+        document.write('<br>'+o+'<br>');
+
+
+        
+    </script>
+</body>
+</html>
