@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in & For of Loop</title>
+</head>
+<body>
+    <script>
+        // we use for in loop for array index, object printing
+        // we use for of loop as array not object
+
+        const cities = ['Dhaka', 'Bogra', 'Rajshahi', 'Rangpur'];
+        const country = {
+            name : 'Bangladesh',
+            capital: 'Dhaka'
+        }
+
+        // for in loop
+        document.write('For in loop for printing index:<br>');
+        for(city in cities)
+        {
+            document.write(city + '<br>');
+        }
+
+        // for in loop in cities 
+        document.write('Value loop print:<br>')
+        for(city in cities)
+        {
+            document.write(cities[city] + '<br>');
+        }
+
+        // For of Loop 
+        document.write('<br><br>For of Loop Example:<br>');
+        for(city of cities)
+        {
+            document.write(city + '<br>');
+        }
+    </script>
+</body>
+</html>
