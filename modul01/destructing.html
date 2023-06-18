@@ -62,8 +62,24 @@
         document.write(fname1+ ' ' + lname2 + ' ' + rest + '<br><br>');
         document.write('Seperator Operator object property show : ' + rest.age + '<br>');
 
+        // function destructuring
+        function getData() {
+            const country = "Bangladesh";
+            const capital = "Dhaka";
+            return { country, capital };
+        }
 
-        
+        const details = getData();
+        document.write('<br>Function Destructuring:<br>');
+        document.write('<br>Normal way of function destructuring<br>');
+        document.write(details.country + '<br><br>' + details.capital + '<br><br>');
+
+        // destructuring ES6
+        const { country, capital } = getData();
+        document.write('<br><br>ES6 function destructuring:<br>');
+        document.write(country + '<br><br>' + capital + '<br><br>');
+
+
         
     </script>
 </body>
