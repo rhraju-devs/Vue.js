@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Cloning</title>
+</head>
+<body>
+    <script>
+        const person = {
+            fname: 'John',
+            lname: 'Doe'
+        }
+        const anotherPerson = person;
+        anotherPerson.fname = 'Jane';
+        document.write('<br>' + JSON.stringify(anotherPerson));
+        document.write('<br>' + anotherPerson.fname + '<br>');
+
+        document.write('<br>ES6 Object Cloning:<br><br>');
+        const anotherPerson1 = Object.assign({}, person);
+        anotherPerson1.fname = 'Jimmy';
+        document.write('<br>' + JSON.stringify(anotherPerson1));
+        document.write('<br>' + anotherPerson1.fname + '<br>');
+
+    </script>
+</body>
+</html>
