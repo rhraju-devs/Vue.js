@@ -39,7 +39,31 @@
         document.write('<br>'+n+'<br>');
         document.write('<br>'+o+'<br>');
 
+        // object destructing
+        const person = {
+            fname: 'John',
+            lname: 'Doe'
+        }
+        const {fname, lname} = person;
+        // we have to give the same property name as object don't change it
 
+        document.write('<br><br>Object Destructing:<br><br>');
+        document.write(fname + "<br>" +lname+'<br><br>');
+
+        // another example of object destructing
+        const person1 = {
+            fname1 : 'John',
+            lname2: 'Doe',
+            age: 32,
+            Sex:'M'
+        }
+        const {fname1,lname2, ...rest} = person1;
+        document.write('Another example of object destructing:<br>');
+        document.write(fname1+ ' ' + lname2 + ' ' + rest + '<br><br>');
+        document.write('Seperator Operator object property show : ' + rest.age + '<br>');
+
+
+        
         
     </script>
 </body>
