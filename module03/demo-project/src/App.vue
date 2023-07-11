@@ -1,18 +1,20 @@
 <script setup>
-  const message = 'Welcome. Get ready to master Vue.js 3!'
-  const preDateMessage ='Today is '
+  // const message = 'Welcome. Get ready to master Vue.js 3!'
+  // const preDateMessage ='Today is '
 
-    function getDate()
-    {
-      const date = new Date();
-      return date.toDateString()
-    }
+  //   function getDate()
+  //   {
+  //     const date = new Date();
+  //     return date.toDateString()
+  //   }
 
-    const data = {
-      message: 'Welcome. Get ready to master Vue.js 3!',
-      date: '12 Jully, 2023',
-      task: [1,2,3,4],
-    }
+  //   const data = {
+  //     message: 'Welcome. Get ready to master Vue.js 3!',
+  //     date: '12 Jully, 2023',
+  //     task: [1,2,3,4],
+  //   }
+
+  import {data, getDate,message,preDateMessage} from './data/data'
 </script>
 
 <template>
