@@ -4,6 +4,9 @@
   const searchUrl1 = "https://www.pexels.com/search/tiger"
   const searchUrl2 = "https://www.pexels.com/search/"
 
+  const message = "Welcome. Get ready to master <em>Vue.js 3!</em>"
+  const data = "<string>30th June, 2023</string>"
+
 </script>
 
 <template>
@@ -18,6 +21,10 @@
 <h3>
   <a target="_blank" :href="`https://www.pexels.com/search/${animal.toLowerCase()}`"> Search for {{ animal }}</a>
 </h3>
+
+<h3>Displaying Html without sanitise</h3>
+<h4 v-html="message"></h4>
+<h4 v-html="data"></h4>
 </template>
 
 <style scoped>
