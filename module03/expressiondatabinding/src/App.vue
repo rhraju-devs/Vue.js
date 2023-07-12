@@ -7,6 +7,9 @@
   const message = "Welcome. Get ready to master <em>Vue.js 3!</em>"
   const data = "<string>30th June, 2023</string>"
 
+  const location = "Dhaka"
+  const weather = "t"
+
 </script>
 
 <template>
@@ -25,6 +28,14 @@
 <h3>Displaying Html without sanitise</h3>
 <h4 v-html="message"></h4>
 <h4 v-html="data"></h4>
+
+<p>If else condition</p>
+<h1>{{ location }}</h1>
+<h2 v-if="weather == 's'">Weather : Sunny</h2>
+<h2 v-else-if="weather == 'pc'">Weather : Party Cloudy</h2>
+<h2 v-else-if="weather == 'r'">Weather : Rainy</h2>
+<h2 v-else-if="weather == 't'">Weather : Thunderstorm</h2>
+<h2 v-else>Weather : Cyclone</h2>
 </template>
 
 <style scoped>
