@@ -14,7 +14,7 @@
   //     task: [1,2,3,4],
   //   }
 
-  import {data, getDate,message,preDateMessage} from './data/data'
+  import {data, message, preDateMessage, getDate} from './data/data'
 </script>
 
 <template>
